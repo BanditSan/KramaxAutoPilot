@@ -27,7 +27,7 @@
 	int i2 = 0;
 	string s;
 
-	string versionfile =  @"D:\Users\jbb\github\KramaxAutoPilot\KramaxAutoPilot.version";
+	string versionfile =  @"D:\Games\KSP\KramaxAutoPilot\KramaxAutoPilot.version";
 	if (!File.Exists(versionfile))
 	{
 		Write("File: " + versionfile + " missing\n");		

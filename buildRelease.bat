@@ -29,7 +29,7 @@ set VERSIONFILE=%GAMEDIR%.version
 set LICENSE=LICENSE.txt
 set README=README.md
 
-set RELEASEDIR=d:\Users\jbb\release
+set RELEASEDIR=D:\Games\KSP\Release
 set ZIP="c:\Program Files\7-zip\7z.exe"
 
 rem Copy files to GameData locations
@@ -46,16 +46,16 @@ rem Get Version info
 copy %VERSIONFILE% tmp.version
 set VERSIONFILE=tmp.version
 rem The following requires the JQ program, available here: https://stedolan.github.io/jq/download/
-c:\local\jq-win64  ".VERSION.MAJOR" %VERSIONFILE% >tmpfile
+D:\Download\jq-win64  ".VERSION.MAJOR" %VERSIONFILE% >tmpfile
 set /P major=<tmpfile
 
-c:\local\jq-win64  ".VERSION.MINOR"  %VERSIONFILE% >tmpfile
+D:\Download\jq-win64  ".VERSION.MINOR"  %VERSIONFILE% >tmpfile
 set /P minor=<tmpfile
 
-c:\local\jq-win64  ".VERSION.PATCH"  %VERSIONFILE% >tmpfile
+D:\Download\jq-win64  ".VERSION.PATCH"  %VERSIONFILE% >tmpfile
 set /P patch=<tmpfile
 
-c:\local\jq-win64  ".VERSION.BUILD"  %VERSIONFILE% >tmpfile
+D:\Download\jq-win64  ".VERSION.BUILD"  %VERSIONFILE% >tmpfile
 set /P build=<tmpfile
 del tmpfile
 del tmp.version
